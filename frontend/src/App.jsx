@@ -28,16 +28,6 @@ export default function App() {
         )}
       </header>
 
-      {!loggedIn && (
-        <div className="hero-panel">
-          <div>
-            <span className="badge">Smarter links</span>
-            <h2>Shorten, track, and share with confidence.</h2>
-          </div>
-          <p>Turn long URLs into polished links your audience will actually click.</p>
-        </div>
-      )}
-
       {loggedIn ? <Dashboard onLogout={logout} /> : <Auth onDone={() => setLoggedIn(true)} />}
     </div>
   );
